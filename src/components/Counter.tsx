@@ -23,10 +23,10 @@ export default class CounterComponent extends React.Component<IProps, IState>{
     number:0
   }
   render(){
+    const { name } = this.props;
     return(
       <div>
-        <p>{this.state.number}</p>
-        <button onClick={()=>this.setState({number:this.state.number + 1})}>+</button>
+        我的名字叫：{name}
       </div>
     )
   }
