@@ -23,7 +23,7 @@ const conf = {
         filename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[chunkhash].js'),
         chunkFilename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[id].[chunkhash].js'),
         publicPath: config.assetsPublicPath,
-        pathinfo: false
+        // pathinfo: false
     },
     resolve: {
         // 被解析的文件扩展名

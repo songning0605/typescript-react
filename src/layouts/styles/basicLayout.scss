@@ -1,9 +1,8 @@
-.basicLayout{
-  background: rgb(177, 20, 20);
-  margin: 16px;
-}
-
 .wrapper{
-  font-size: 16px;
-  line-height: 32px;
+  background: #ddd;
+  padding: 16px;
+  .content{
+    background: #fff;
+    padding: 16px;
+  }
 }
