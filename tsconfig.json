@@ -19,7 +19,10 @@
     "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
     /* Module Resolution Options */
     "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
-    // "paths": {},                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+    "paths": {
+      "@components/*": ["components/*"],
+      "@views/*": ["containers/views/*"]
+    },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "typeRoots": ["node", "node_modules/@types", "./typings"],                       /* List of folders to include type definitions from. */
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
