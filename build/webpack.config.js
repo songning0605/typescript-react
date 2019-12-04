@@ -12,16 +12,21 @@ const optimization = require('./optimization')
 require('./cleanup-folder')
 
 const conf = {
+    // 开发模式
     mode: process.env.NODE_ENV,
+    // 项目入口
     entry: { app: ['./src/index.tsx'] },
+    // 打包输出路径
     output: {
         path: config.assetsRoot,
+        // 开发环境下不使用hash模式
         filename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[chunkhash].js'),
         chunkFilename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[id].[chunkhash].js'),
         publicPath: config.assetsPublicPath,
         pathinfo: false
     },
     resolve: {
+        // 被解析的文件扩展名
         extensions: constants.FILE_EXTENSIONS,
         plugins: [
             new TsconfigPathsPlugin({

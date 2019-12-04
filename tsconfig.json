@@ -26,8 +26,8 @@
   },
   "include": [
     "src/**/*",
-    "typings",
-  ],
+    "typings"
+  ]
   // "exclude": [
   //   "node_modules",
   //   // "**/*.spec.ts"
