@@ -1,5 +1,5 @@
 module.exports = function (api) {
-    api.cache(true);                                                // 必须，否则会报错
+    api.cache(true);
 
     const presets = [
         [
