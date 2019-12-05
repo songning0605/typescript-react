@@ -11,11 +11,12 @@ const config = require('./config')
 const { assetsPath } = require('./utils')
 const env = require('./env.json')
 
+// 根据环境获取域名配置
 const oriEnv = env[constants.APP_ENV]
 Object.assign(oriEnv, {
     APP_ENV: constants.APP_ENV
 })
-// webpack process.env
+// 定义webpack process.env
 const defineEnv = {}
 for (let key in oriEnv) {
     defineEnv[`process.env.${key}`] = JSON.stringify(oriEnv[key])

@@ -1,4 +1,6 @@
+// 项目支持css module
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+// 自动打开浏览器
 const openBrowser = require('react-dev-utils/openBrowser')
 
 const config = require('./config')
@@ -28,6 +30,7 @@ const conf = {
     resolve: {
         // 被解析的文件扩展名
         extensions: constants.FILE_EXTENSIONS,
+        // resolve中的plugins有什么作用？
         plugins: [
             new TsconfigPathsPlugin({
                 configFile: resolve('tsconfig.webpack.json'),
@@ -44,14 +47,15 @@ const conf = {
     stats: 'minimal',
     devtool: config.sourceMap
 }
-
+// todo 测试环境下启动服务
 if (process.env.NODE_ENV === 'development') {
     conf.devServer = {
-        port: config.devPort,
-        hot: true,
-        disableHostCheck: true,
-        host: '0.0.0.0',
+        port: config.devPort, // 端口后自定义配置
+        hot: true, // 开启热加载
+        disableHostCheck: true, // 没搞懂
+        host: '0.0.0.0', // 域名
         after: function() {
+            // 根据配置的端口，自动打开浏览器
             openBrowser(`http://localhost:${config.devPort}`)
         }
     }
