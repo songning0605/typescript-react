@@ -1,11 +1,13 @@
+@import '_variable.scss';
+
 .wrapper{
-  background: #ddd;
+  background: $primary-color;
   padding: 16px;
   .content{
     background: #fff;
     padding: 16px;
   }
   .footer{
-    color: '#333';
+    color: $primary-color;
   }
 }
