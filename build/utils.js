@@ -1,3 +1,6 @@
+/**
+ * 路径查找工具函数
+ */
 const path = require('path')
 
 const config = require('./config')

@@ -21,7 +21,8 @@
     "baseUrl": "./src",                       /* Base directory to resolve non-absolute module names. */
     "paths": {
       "@components/*": ["components/*"],
-      "@views/*": ["containers/views/*"]
+      "@views/*": ["containers/views/*"],
+      "@shared/*": ["containers/shared/*"]
     },                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "typeRoots": ["node", "node_modules/@types", "./typings"],                       /* List of folders to include type definitions from. */
     /* Advanced Options */

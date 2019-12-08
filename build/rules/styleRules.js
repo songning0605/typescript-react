@@ -26,6 +26,7 @@ const sassLoader = {
     }
 }
 
+// antd是用less写的样式，需要针对antd添加less loader
 const lessLoader = {
     loader: 'less-loader',
     options: {
@@ -34,6 +35,7 @@ const lessLoader = {
     }
 }
 
+// 基础样式loader，统一使用编译缓存
 const baseLoaders = modules => [
     config.extractCss ? MiniCssExtractPlugin.loader : 'style-loader',
     cacheLoader,
