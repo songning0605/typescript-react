@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import AsyncComponent from "@shared/App/AsyncComponent";
 import menuData from "@/layouts/menu";
 
-// 生成嵌套（子）路由
+// 生成嵌套路由(子路由)
 export const nestedRouteRender = (list:Array<any>) => (
   <Switch>
     {baseRouteRender(list)}
