@@ -1,4 +1,5 @@
 interface menuProps {
+  name?: '',
   path: string,
   component: any,
   exact: boolean,
@@ -7,21 +8,36 @@ interface menuProps {
 
 const menu: Array<menuProps> = [
   {
-    path: '/',
+    path: '/index',
     component: () => import('@/layouts/BasicLayout'),
+    exact: false,
     routes: [
       {
-        path: '/',
+        name: '首页',
+        path: '/index/about',
         component: () => import('@views/Home'),
-        exact: true,
+        exact: false,
       },
       {
-        path: '/about',
-        component: () => import('@views/About'),
+        name: 'Home',
+        path: '/index/home',
+        component: () => import('@views/Home'),
         exact: false,
+      },
+      {
+        name: '关于我',
+        path: '/index',
+        component: () => import('@views/About'),
+        exact: true,
       },
     ],
   },
-]
+  {
+    path: '/other',
+    component: () => import('@/layouts/OtherLayout'),
+    exact: false,
+    routes: [],
+  },
+];
 
 export default menu;
