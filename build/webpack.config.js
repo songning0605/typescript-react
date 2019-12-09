@@ -54,6 +54,7 @@ if (process.env.NODE_ENV === 'development') {
         hot: true, // 开启热加载
         disableHostCheck: true, // 没搞懂
         host: '0.0.0.0', // 域名
+        historyApiFallback: true, // 解决刷新404问题
         after: function() {
             // 根据配置的端口，自动打开浏览器
             openBrowser(`http://localhost:${config.devPort}`)
