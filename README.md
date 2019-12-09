@@ -10,3 +10,5 @@ A：
 
 ##### Q：`postcss-loader`的作用和配置，和 `autoprefixer` 有什么关系？
 A：
+
+##### Q：`BrowserRouter as Router` 可以替换`Router`，这样就不用再给`Router`组件传递`history`

@@ -6,11 +6,10 @@ interface IProps {
 
 }
 
-const BasicLayout: React.FunctionComponent<IProps> = props =>{
+const BasicLayout: React.FunctionComponent<IProps> = (props:IProps) =>{
   return <div className={styles.wrapper}>
     <div className={styles.content}>
-      我是基础窗口
-      <Test/>
+
     </div>
   </div>;
 };

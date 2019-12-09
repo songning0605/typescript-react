@@ -1,7 +1,6 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import App from '@shared/App';
-// import BasicLayout from "./layouts/basicLayout";
 
 import './index.scss';
 
