@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const WebpackBar = require('webpackbar');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 // const WorkboxPlugin = require('workbox-webpack-plugin')
@@ -38,6 +39,8 @@ const devPlugins = [
         template: 'build/template/index.html',
         inject: true
     }),
+    // 开发模式下添加进度条
+    new WebpackBar(),
     ...compilerHooks
 ]
 

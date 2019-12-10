@@ -58,7 +58,8 @@ if (process.env.NODE_ENV === 'development') {
         after: function() {
             // 根据配置的端口，自动打开浏览器
             openBrowser(`http://localhost:${config.devPort}`)
-        }
+        },
+        stats: 'errors-only'
     }
 }
 

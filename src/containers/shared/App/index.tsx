@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import AsyncComponent from "@shared/App/AsyncComponent";
-import menuData from "@/layouts/menu";
+import AsyncComponent from "@components/AsyncComponent";
+import menuData from "../../../config/menu";
 
 // 生成嵌套路由(子路由)
 export const nestedRouteRender = (list:Array<any>) => (

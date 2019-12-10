@@ -1,4 +1,4 @@
-interface menuProps {
+type menuProps = {
   name?: '',
   path: string,
   component: any,
@@ -9,12 +9,12 @@ interface menuProps {
 const menu: Array<menuProps> = [
   {
     path: '/',
-    component: () => import('@/layouts/Index'),
+    component: () => import('../layouts/IndexPage'),
     exact: true,
   },
   {
     path: '/index',
-    component: () => import('@/layouts/BasicLayout'),
+    component: () => import('../layouts/BasicLayout'),
     exact: false,
     routes: [
       {
@@ -33,7 +33,7 @@ const menu: Array<menuProps> = [
   },
   {
     path: '/other',
-    component: () => import('@/layouts/OtherLayout'),
+    component: () => import('../layouts/ThirdLayout'),
     exact: false,
     routes: [],
   },

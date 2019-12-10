@@ -9,15 +9,18 @@ interface IProps {
 const Index: React.FunctionComponent<IProps> = (props:IProps) =>{
   return (
     <div>
-      <div className={styles.navWrapper}>
+      <header className={styles.headerWrapper}>
         typescript-react项目脚手架
-      </div>
+      </header>
       <section className={styles.mainWrapper}>
         <div className="card">
           <NavLink to="/index">首页</NavLink>
         </div>
         <div className="card">
           <NavLink to="/other">other</NavLink>
+        </div>
+        <div className={styles.reactLogo}>
+          <img className={styles.an} width="160" src="https://gw.alipayobjects.com/zos/rmsportal/tXlLQhLvkEelMstLyHiN.svg" />
         </div>
       </section>
     </div>

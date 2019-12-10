@@ -1,5 +1,6 @@
-.navWrapper{
-  background: #f4f4f4;
+.headerWrapper{
+  background: #2B3A42;
+  color: #fff;
   text-align: center;
   height: 60px;
   line-height: 60px;
@@ -16,12 +17,33 @@
     }
     .card{
       width: 25%;
+      background: #f4f4f4;
       padding: 24px;
       line-height: 32px;
       border: 1px solid #ddd;
-      &:hover{
-        box-shadow: 0 0 2px 2px #ddd;
-      }
     }
   }
+}
+
+.reactLogo{
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+@-webkit-keyframes rotation{
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+.an{
+  width: 25%;
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+  animation: rotation 6s linear infinite;
+  -moz-animation: rotation 6s linear infinite;
+  -webkit-animation: rotation 6s linear infinite;
+  -o-animation: rotation 6s linear infinite;
 }
