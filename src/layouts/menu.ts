@@ -8,16 +8,15 @@ interface menuProps {
 
 const menu: Array<menuProps> = [
   {
+    path: '/',
+    component: () => import('@/layouts/Index'),
+    exact: true,
+  },
+  {
     path: '/index',
     component: () => import('@/layouts/BasicLayout'),
     exact: false,
     routes: [
-      {
-        name: '首页',
-        path: '/index/about',
-        component: () => import('@views/Home'),
-        exact: false,
-      },
       {
         name: 'Home',
         path: '/index/home',
@@ -26,7 +25,7 @@ const menu: Array<menuProps> = [
       },
       {
         name: '关于我',
-        path: '/index',
+        path: '/index/about',
         component: () => import('@views/About'),
         exact: true,
       },

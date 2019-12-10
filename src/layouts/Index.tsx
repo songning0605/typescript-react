@@ -6,13 +6,14 @@ interface IProps {
 
 }
 
-const OtherLayout: React.FunctionComponent<IProps> = (props:IProps) =>{
+const Index: React.FunctionComponent<IProps> = (props:IProps) =>{
   return <div className={styles.wrapper}>
     <div className={styles.content}>
-      <Link to="/index">回到主窗口</Link>
-      <h3>我是其他窗口</h3>
+      <Link to="/index">首页</Link>
+      <Link to="/other">other</Link>
+      <h3>引导页</h3>
     </div>
   </div>;
 };
 
-export default OtherLayout;
+export default Index;

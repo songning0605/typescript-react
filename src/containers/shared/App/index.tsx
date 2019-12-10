@@ -28,7 +28,7 @@ const App:React.FunctionComponent = props => {
     <Router>
       <Switch>
         {baseRouteRender(menuData)}
-        <Redirect to="/index" />
+        <Redirect to="/" />
       </Switch>
     </Router>
   );
