@@ -1,19 +1,27 @@
 import React from 'react';
-import styles from '@/layouts/styles/basicLayout.scss';
-import {Link} from "react-router-dom";
+import styles from '@/layouts/styles/index.scss';
+import {NavLink} from "react-router-dom";
 
 interface IProps {
 
 }
 
 const Index: React.FunctionComponent<IProps> = (props:IProps) =>{
-  return <div className={styles.wrapper}>
-    <div className={styles.content}>
-      <Link to="/index">首页</Link>
-      <Link to="/other">other</Link>
-      <h3>引导页</h3>
+  return (
+    <div>
+      <div className={styles.navWrapper}>
+        typescript-react项目脚手架
+      </div>
+      <section className={styles.mainWrapper}>
+        <div className="card">
+          <NavLink to="/index">首页</NavLink>
+        </div>
+        <div className="card">
+          <NavLink to="/other">other</NavLink>
+        </div>
+      </section>
     </div>
-  </div>;
+  );
 };
 
 export default Index;
