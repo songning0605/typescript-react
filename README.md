@@ -12,3 +12,7 @@ A：
 A：
 
 ##### Q：`BrowserRouter as Router` 可以替换`Router`，这样就不用再给`Router`组件传递`history`
+A：
+
+##### Q：项目打包后总体积`170k`, `react-dom` 和 `react` 占了 `130k`需要把`react`和`react-dom`提取Wie公共模块
+A：

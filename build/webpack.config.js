@@ -22,8 +22,8 @@ const conf = {
     output: {
         path: config.assetsRoot,
         // 开发环境下不使用hash模式
-        filename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[chunkhash].js'),
-        chunkFilename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[id].[chunkhash].js'),
+        filename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[chunkhash:8].js'),
+        chunkFilename: constants.APP_ENV === 'dev' ? '[name].js' : assetsPath('js/[name].[id].[chunkhash:8].js'),
         publicPath: config.assetsPublicPath,
         // pathinfo: false
     },
