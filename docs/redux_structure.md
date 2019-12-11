@@ -51,9 +51,18 @@ return (
     );
 ```
 
-接下来我们来看看react-starter-kit，github.com/bodyno/reac…
+[`redux`结构设置解析文章](https://juejin.im/post/58cbfcb05c497d0057b9b228)，[对应的`GitHub`仓库](https://github.com/bodyno/react-starter-kit/blob/master/src/routes/Elapse/containers/ElapseContainer.js)
 
-github.com/bodyno/reac… 这个项目的结构使用的是 fractal(不规则碎片形：适合大型项目)*，方法的分组主要是依照特性而不是文件类型。注意，这个目录结构只是一个指引，并不一定要按这个来。这种结构谐在让程序更容易扩展
+各种版本的 `react-starter-kit`
+
+https://github.com/bodyno/react-starter-kit/blob/master/src/routes/Elapse/containers/ElapseContainer.js
+
+https://github.com/davezuko/react-redux-starter-kit
+
+https://github.com/kriasoft/react-starter-kit
+
+
+这个项目的结构使用的是 fractal(不规则碎片形：适合大型项目)*，方法的分组主要是依照特性而不是文件类型。注意，这个目录结构只是一个指引，并不一定要按这个来。这种结构谐在让程序更容易扩展
 ```
 ├── src                      # 程序源文件
 │   ├── main.js              # 程序启动和渲染

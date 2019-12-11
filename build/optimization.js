@@ -31,6 +31,7 @@ module.exports =
                       parallel: true,
                       sourceMap: Boolean(config.sourceMap)
                   }),
+                  // css代码压缩
                   new OptimizeCSSAssetsPlugin({
                       cssProcessor: require('cssnano'),
                       cssProcessorOptions: {

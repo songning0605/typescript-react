@@ -10,9 +10,9 @@ const compilerHooks = [
             compiler.hooks.done.tap('done', function(stats) {
                 const rawMessages = stats.toJson({}, true)
                 const messages = formatWebpackMessages(rawMessages)
-                if (!messages.errors.length && !messages.warnings.length) {
-                    clearConsole()
-                }
+                // if (!messages.errors.length && !messages.warnings.length) {
+                //     clearConsole()
+                // }
                 if (messages.errors.length) {
                     console.log('Failed to compile.')
                     messages.errors.forEach(e => console.log(e))
