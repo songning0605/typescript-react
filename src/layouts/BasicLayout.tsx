@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, NavLink, Link } from 'react-router-dom';
-import { nestedRouteRender } from "@shared/App";
+import { nestedRouteRender } from '@/containers/shared/App/routeRender';
 import styles from '@/layouts/styles/basicLayout.scss';
 
 interface IProps {
