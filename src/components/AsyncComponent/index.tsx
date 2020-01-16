@@ -8,6 +8,7 @@ interface Props<T> {
 
 const loadableOptions = {fallback: <div>Loading...</div>};
 
+// 代码分隔中间组件
 function AsyncComponent<T>(props:Props<T>) {
     const { component } = props;
 

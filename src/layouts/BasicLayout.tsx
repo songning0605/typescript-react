@@ -9,6 +9,8 @@ interface IProps {
 
 const BasicLayout: React.FunctionComponent<IProps> = (props:IProps) =>{
   const { routes } = props;
+  console.log(routes);
+  
   return <div className={styles.wrapper}>
     <div className={styles.content}>
       <Link to="/other">跳转其他窗口</Link>
