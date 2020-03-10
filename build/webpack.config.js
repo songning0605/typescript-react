@@ -1,23 +1,19 @@
-// 项目支持css module
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
-// 自动打开浏览器
-const openBrowser = require('react-dev-utils/openBrowser')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin'); // 项目支持css module
+const openBrowser = require('react-dev-utils/openBrowser'); // 自动打开浏览器
 
-const config = require('./config')
-const constants = require('./constants')
-const styleRules = require('./rules/styleRules')
-const jsRules = require('./rules/jsRules')
-const fileRules = require('./rules/fileRules')
-const plugins = require('./plugins')
-const { assetsPath, resolve } = require('./utils')
-const optimization = require('./optimization')
-require('./cleanup-folder')
+const config = require('./config') // 打包相关常量配置
+const constants = require('./constants'); // 环境相关常量配置
+const styleRules = require('./rules/styleRules'); // webpack样式打包规则配置
+const jsRules = require('./rules/jsRules'); // webpack js|ts打包规则配置
+const fileRules = require('./rules/fileRules'); // webpack 静态资源打包配置
+const plugins = require('./plugins'); // webpack 插件配置
+const { assetsPath, resolve } = require('./utils'); // 路径解析工具函数
+const optimization = require('./optimization'); // 代码压缩，分割，提取公共代码配置
+require('./cleanup-folder'); // 每次打包的时候，清空对应output文件夹
 
 const conf = {
-    // 开发模式
-    mode: process.env.NODE_ENV,
-    // 项目入口
-    entry: { app: ['./src/index.tsx'] },
+    mode: process.env.NODE_ENV, // 开发模式
+    entry: { app: ['./src/index.tsx'] }, // 项目入口
     // 打包输出路径
     output: {
         path: config.assetsRoot,

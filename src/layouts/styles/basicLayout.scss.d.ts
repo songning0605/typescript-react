@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "wrapper": string;
+  readonly "layoutWrapper": string;
   readonly "content": string;
   readonly "footer": string;
 };
