@@ -6,7 +6,7 @@ class PromiseA {
   constructor(executor) {
     // success
     let resolve = () => { };
-    // failed
+    // failedÍ
     let reject = () => { };
 
     executor(resolve, reject);
@@ -85,10 +85,10 @@ class PromiseC {
 /**
  * 4、解决异步实现
  *    现在基本可以实现简单的同步代码，
- *        但是当resolve在setTomeout内执行，
+ *        但是当resolve在setTimeout内执行，
  *        then时state还是pending等待状态 我们就需要在then调用的时候，
  *        将成功和失败存到各自的数组，一旦reject或者resolve，就调用它们
- * 
+ *
  *    类似于发布订阅，先将then里面的两个函数储存起来，由于一个promise可以有多个then，所以存在同一个数组内。成功或者失败时，forEach调用它们
  */
 class PromiseD {
@@ -146,5 +146,35 @@ class PromiseD {
     if (this.state === 'rejected') {
       onRejected(this.reason);
     }
+    // 当state为pending时，保存成功或失败函数
+    if (this.state === 'pending') {
+      // onFulfilled传入到成功数组
+      this.onResolvedCallbacks(() => {
+        onFulfilled(this.value);
+      })
+      // onRejected传入到失败数组
+      this.onRejectedCallbacks.push(() => {
+        onRejected(this.reason);
+      })
+    }
   }
 }
+
+/**
+ * 5、解决链式调用
+ *    Promise/A+规定，promise可以进行链式调用
+ *    为了达成链式调用，Promise/A+规定，then方法中需要返回一个新的promise成为promise2
+ *      promise2 = new Promise((resolve, reject) => { })
+ *      将这个promise2返回的值传递到下一个then中
+ *      如果返回一个普通的值，则将普通的值传递给下一个then中
+ *
+ *    Promise/A+规定，第一个then返回的promise就是onFulfilled()或者onRejected()的值
+ *
+ *    Promise/A+规定onFulfilled()或onRejected()的值，即第一个then返回的值，叫做x，判断x的函数叫做resolvePromise
+ *      首先，要看x是不是promise
+ *      如果是promise，则取它的结果，作为新的promise2成功的结果
+ *      如果是普通值，直接作为promise2成功的结果
+ *      所以要比较x和promise2
+ *      resolvePromise的参数有promise2（默认返回的promise）、x（我们自己return的对象）、resolve、reject
+ *      resolve和reject是promise2的
+ */
