@@ -1,16 +1,20 @@
 import React from "react";
-import { HashRouter as Router, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/lib/locale/zh_CN';
 import menuData from "../../../config/menu";
 import { baseRouteRender } from './routeRender';
 
 const App: React.FunctionComponent = props => {
   return (
-    <Router>
-      <Switch>
-        {baseRouteRender(menuData)}
-        <Redirect to="/" />
-      </Switch>
-    </Router>
+    <ConfigProvider locale={zhCN}>
+      <Router>
+        <Switch>
+          {baseRouteRender(menuData)}
+          <Redirect to="/" />
+        </Switch>
+      </Router>
+    </ConfigProvider>
   );
 };
 

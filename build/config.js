@@ -10,7 +10,7 @@ const STATICDOMAIN = APP_ENV === 'prod' ? '.' : ''
 
 module.exports = {
     // open http://localhost:devPort/
-    devPort: 8080,
+    devPort: 8090,
     // html输出路径
     index: path.resolve(__dirname, `./../dist/${APP_ENV}/index.html`),
     // 静态文件打包输出路径
