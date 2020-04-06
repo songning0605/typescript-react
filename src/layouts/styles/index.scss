@@ -34,13 +34,14 @@
   text-align: center;
   transform: translate(0, -50%);
 }
-@-webkit-keyframes rotation{
+@keyframes rotation{
   from {-webkit-transform: rotate(0deg);}
   to {-webkit-transform: rotate(360deg);}
 }
 .an{
   width: 25%;
   border-radius: 50%;
+  transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
   animation: rotation 6s linear infinite;
   -moz-animation: rotation 6s linear infinite;

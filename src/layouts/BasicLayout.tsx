@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { nestedRouteRender } from '@/containers/shared/App/routeRender';
+import { nestedRouteRender } from '@/App/routeRender';
+import SiderMenu from '@components/SiderMenu';
 import styles from '@/layouts/styles/basicLayout.scss';
 
 interface IProps {
@@ -23,6 +24,7 @@ const BasicLayout: React.FunctionComponent<IProps> = (props: IProps) => {
   </div>
 
   return <div className={styles.layoutWrapper}>
+    <SiderMenu />
     <div className={styles.content}>
       {menuRender()}
       {routeRender()}

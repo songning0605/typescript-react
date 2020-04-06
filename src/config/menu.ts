@@ -20,13 +20,13 @@ const menu: Array<menuProps> = [
       {
         name: 'Home',
         path: '/index/home',
-        component: () => import('@views/Home'),
+        component: () => import('@/views/Home'),
         exact: false,
       },
       {
         name: '关于我',
         path: '/index/about',
-        component: () => import('@views/About'),
+        component: () => import('@/views/About'),
         exact: true,
       },
     ],
