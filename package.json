@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "precommit": "pretty-quick --staged",
     "lint-staged": "lint-staged",
     "lint": "eslint src --ext .ts,.tsx && stylelint \"./src/**/*.scss\"",
     "dev": "cross-env NODE_ENV=development APP_ENV=dev webpack-dev-server --config build/webpack.config.js",
@@ -43,6 +44,8 @@
     "@babel/preset-env": "7.8.7",
     "@babel/preset-react": "7.8.3",
     "@babel/preset-typescript": "7.8.3",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@svgr/webpack": "^5.0.1",
     "@types/classnames": "^2.2.8",
     "@types/loadable__component": "^5.10.0",
