@@ -1,7 +1,7 @@
 declare const styles: {
-  readonly "layoutWrapper": string;
   readonly "content": string;
   readonly "footer": string;
+  readonly "layoutWrapper": string;
 };
 export = styles;
 

@@ -19,7 +19,7 @@ module.exports =
                       },
                       vendor: {
                           name: 'vendor',
-                          test: /[\\/]node_modules[\\/](react|react-dom|moment|axios)[\\/]/,
+                          test: /[\\/]node_modules[\\/](react|react-dom|lodash|moment|axios)[\\/]/,
                           chunks: 'all',
                           priority: 10
                       }

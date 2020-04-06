@@ -50,23 +50,23 @@ const prodPlugins = [
         filename: config.index,
         template: 'build/template/index.html',
         inject: true,
-        // htmlda打包压缩
-        // minify: {
-        //     removeComments: true,
-        //     collapseWhitespace: true,
-        //     removeAttributeQuotes: true
-        //     // more options:
-        //     // https://github.com/kangax/html-minifier#options-quick-reference
-        // },
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // more options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+        },
         // necessary to consistently work with multiple chunks via CommonsChunkPlugin
         chunksSortMode: 'dependency'
     }),
     new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
         // both options are optional
-        filename: assetsPath('css/[name].[contenthash].css'),
-        chunkFilename: assetsPath('css/[name].[id].[contenthash].css')
+        filename: assetsPath('css/[name].[contenthash:8].css'),
+        chunkFilename: assetsPath('css/[name].[id].[contenthash:8].css')
     }),
+    new WebpackBar(),
     // new WorkboxPlugin.GenerateSW({
     //     cacheId: 'ts-react-webpack',
     //     clientsClaim: true,

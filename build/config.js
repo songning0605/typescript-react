@@ -24,7 +24,7 @@ module.exports = {
     // id you use CDN, change it!!! 暂时不用
     // assetsPattern: new RegExp(`${DOMAIN.replace(/\//g, '\\/')}\\/static`),
     // production sourceMap for monitoring
-    // 是否生成sourceMap，方便调试，具体怎么使用还没搞懂
+    // 打包时是否生成sourceMap，方便调试
     sourceMap: APP_ENV === 'dev' ? 'eval-source-map' : APP_ENV === 'prod' ? 'source-map' : false,
     // 打包时是否压缩css,只有在生产环境才开启
     extractCss: APP_ENV !== 'dev',
