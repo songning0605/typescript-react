@@ -3,30 +3,34 @@ type menuProps = {
   path: string,
   component: any,
   exact: boolean,
+  key?: string,
   routes?: Array<object>,
 }
 
 const menu: Array<menuProps> = [
   {
     path: '/',
-    component: () => import('../layouts/IndexPage'),
+    component: () => import('@/layouts/IndexPage'),
     exact: true,
   },
   {
     path: '/index',
-    component: () => import('../layouts/BasicLayout'),
+    component: () => import('@/layouts/BasicLayout'),
     exact: false,
+    key: 'index',
     routes: [
       {
         name: 'Home',
+        key: 'Home',
         path: '/index/home',
-        component: () => import('@/views/Home'),
+        component: () => import('@/pages/Home'),
         exact: false,
       },
       {
         name: '关于我',
+        key: 'about',
         path: '/index/about',
-        component: () => import('@/views/About'),
+        component: () => import('@/pages/About'),
         exact: true,
       },
     ],

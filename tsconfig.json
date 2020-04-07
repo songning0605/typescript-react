@@ -7,9 +7,9 @@
     "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
     "sourceMap": true, // 生成sourceMap方便我们在开发过程中调试
     "removeComments": false, /* Do not emit comments to output. */
-    "rootDirs": [
-      "./src"
-    ], /* List of root folders whose combined content represents the structure of the project at runtime. */
+    // "rootDirs": [
+    //   "./src"
+    // ], /* List of root folders whose combined content represents the structure of the project at runtime. */
     "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     "alwaysStrict": true, /* Parse in strict mode and emit "use strict" for each source file. */
     "noUnusedLocals": true, /* Report errors on unused locals. */
@@ -20,10 +20,11 @@
     // "composite": true,                     /* Enable project compilation */
     "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
     /* Module Resolution Options */
-    "baseUrl": "./src", /* Base directory to resolve non-absolute module names. */
+    "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
     "paths": {
-      "@/*": ["./*"],
-      "@components/*": ["components/*"],
+      "@root/*": ["./*"],
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
     }, /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     "typeRoots": [
       "node",
