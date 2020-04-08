@@ -14,7 +14,6 @@ interface IProps {
 const BasicLayout: React.FunctionComponent<IProps> = (props: IProps) => {
   const [members, setMembers] = useState<[string]>([""]);
   const [count, setCount] = React.useState(0);
-  console.log("---render---", members);
   const { routes } = props;
 
   // 渲染当前窗口（应用）路由
