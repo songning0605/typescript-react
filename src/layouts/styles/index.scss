@@ -1,21 +1,21 @@
-.headerWrapper{
-  background: #2B3A42;
+.headerWrapper {
+  background: #2b3a42;
   color: #fff;
   text-align: center;
   height: 60px;
   line-height: 60px;
 }
 
-.mainWrapper{
+.mainWrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  :global{
+  :global {
     .card + .card {
       border-left: 0;
     }
-    .card{
+    .card {
       width: 25%;
       background: #f4f4f4;
       padding: 24px;
@@ -25,7 +25,7 @@
   }
 }
 
-.reactLogo{
+.reactLogo {
   z-index: -1;
   position: absolute;
   left: 0;
@@ -34,11 +34,15 @@
   text-align: center;
   transform: translate(0, -50%);
 }
-@keyframes rotation{
-  from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(360deg);}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-.an{
+.an {
   width: 25%;
   border-radius: 50%;
   transform: rotate(360deg);

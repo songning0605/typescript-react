@@ -4,7 +4,7 @@ import AsyncComponent from "@components/AsyncComponent";
 
 /**
  * 只渲染当前路由，如果有子路由，不做渲染，由当前路由内部处理
- * @param list 
+ * @param list
  */
 export const baseRouteRender = (list: Array<any>) =>
   list.map((item, key) => {
@@ -13,7 +13,9 @@ export const baseRouteRender = (list: Array<any>) =>
         key={key}
         exact={item.exact}
         path={item.path}
-        render={() => <AsyncComponent routes={item.routes} component={item.component} />}
+        render={() => (
+          <AsyncComponent routes={item.routes} component={item.component} />
+        )}
       />
     );
   });
@@ -23,7 +25,5 @@ export const baseRouteRender = (list: Array<any>) =>
  * @param list 子路由配置
  */
 export const nestedRouteRender = (list: Array<any>) => (
-  <Switch>
-    {baseRouteRender(list)}
-  </Switch>
+  <Switch>{baseRouteRender(list)}</Switch>
 );

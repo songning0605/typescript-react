@@ -1,4 +1,5 @@
-复用模块和特定场景下的模块需要分开进行处理，页面的布局view必须整理出来,可以参考[react boilerplate](https://github.com/react-boilerplate/react-boilerplate)。
+复用模块和特定场景下的模块需要分开进行处理，页面的布局 view 必须整理出来,可以参考[react boilerplate](https://github.com/react-boilerplate/react-boilerplate)。
+
 ```
 |——app
    |—— component                # 这里放的都是公共部分的组件
@@ -15,9 +16,11 @@
            |—— ...
            └── reducers.js   # reducer
 ```
-可以说这套项目结构很适合大型项目的组织，component下面包括了大量的通用组件，不管是项目的平台移植，模块复用都很好管理。containers下如HomePage/index.js有复用的模块以及页面场景下特殊的模块构成，同时index.js还负责模块跟redux store数据的链接，对应的每个场景都拥有自身saga，reducer等。构建大型的项目结构参考这个也是一个非常棒的。
 
-react boilerplate 确实可以解决大型项目的结构问题，但是component 和布局结构混合在一起，并没有分离出去，下面这种结构分离了组件，布局模块，更好的管理项目（文件结构同时也增加了复杂度）。
+可以说这套项目结构很适合大型项目的组织，component 下面包括了大量的通用组件，不管是项目的平台移植，模块复用都很好管理。containers 下如 HomePage/index.js 有复用的模块以及页面场景下特殊的模块构成，同时 index.js 还负责模块跟 redux store 数据的链接，对应的每个场景都拥有自身 saga，reducer 等。构建大型的项目结构参考这个也是一个非常棒的。
+
+react boilerplate 确实可以解决大型项目的结构问题，但是 component 和布局结构混合在一起，并没有分离出去，下面这种结构分离了组件，布局模块，更好的管理项目（文件结构同时也增加了复杂度）。
+
 ```
 |── src/
 |  |── views
@@ -28,7 +31,7 @@ react boilerplate 确实可以解决大型项目的结构问题，但是componen
    |   └── reducers.js     # 统一了views下的所有reducer
    |—— layouts            # layouts 负责整个app 的布局结构
    |   |—— Frame.js
-   |   |—— Nav.js      
+   |   |—— Nav.js
    |—— components
    |   |—— Common          # 通用组件
    |   |—— Home            # Home Page下用到的组件
@@ -37,6 +40,7 @@ react boilerplate 确实可以解决大型项目的结构问题，但是componen
 ```
 
 `layouts` 代码
+
 ```
 return (
       <div className="frame">
@@ -61,8 +65,8 @@ https://github.com/davezuko/react-redux-starter-kit
 
 https://github.com/kriasoft/react-starter-kit
 
+这个项目的结构使用的是 fractal(不规则碎片形：适合大型项目)\*，方法的分组主要是依照特性而不是文件类型。注意，这个目录结构只是一个指引，并不一定要按这个来。这种结构谐在让程序更容易扩展
 
-这个项目的结构使用的是 fractal(不规则碎片形：适合大型项目)*，方法的分组主要是依照特性而不是文件类型。注意，这个目录结构只是一个指引，并不一定要按这个来。这种结构谐在让程序更容易扩展
 ```
 ├── src                      # 程序源文件
 │   ├── main.js              # 程序启动和渲染

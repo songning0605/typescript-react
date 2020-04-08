@@ -1,39 +1,39 @@
 {
   "compilerOptions": {
-    "target": "es6", /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */
-    "module": "esnext", /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */
-    "moduleResolution": "node", /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
-    "allowSyntheticDefaultImports": true, /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-    "esModuleInterop": true, /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */
+    "target": "es6" /* Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019' or 'ESNEXT'. */,
+    "module": "esnext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+    "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
     "sourceMap": true, // 生成sourceMap方便我们在开发过程中调试
-    "removeComments": false, /* Do not emit comments to output. */
+    "removeComments": false /* Do not emit comments to output. */,
     // "rootDirs": [
     //   "./src"
     // ], /* List of root folders whose combined content represents the structure of the project at runtime. */
-    "jsx": "react", /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
-    "alwaysStrict": true, /* Parse in strict mode and emit "use strict" for each source file. */
-    "noUnusedLocals": true, /* Report errors on unused locals. */
-    "importHelpers": true, /* Import emit helpers from 'tslib'. */
-    "experimentalDecorators": true, /* Enables experimental support for ES7 decorators. */
-    "outDir": "./dist", /* Redirect output structure to the directory. */
+    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */,
+    "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
+    "noUnusedLocals": true /* Report errors on unused locals. */,
+    "importHelpers": true /* Import emit helpers from 'tslib'. */,
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "outDir": "./dist" /* Redirect output structure to the directory. */,
     // "rootDir": "./",                       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true,                     /* Enable project compilation */
-    "noImplicitAny": true, /* Raise error on expressions and declarations with an implied 'any' type. */
+    "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
     /* Module Resolution Options */
-    "baseUrl": ".", /* Base directory to resolve non-absolute module names. */
+    "baseUrl": "." /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "@root/*": ["./*"],
       "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-    }, /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "@components/*": ["src/components/*"]
+    } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     "typeRoots": [
       "node",
       "node_modules/@types",
       "./typings"
-    ], /* List of folders to include type definitions from. */
+    ] /* List of folders to include type definitions from. */,
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references to the same file. */
-  },
+  }
   // "exclude": [
   //   "node_modules",
   //   // "**/*.spec.ts"

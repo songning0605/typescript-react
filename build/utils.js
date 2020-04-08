@@ -1,14 +1,14 @@
 /**
  * 路径查找工具函数
  */
-const path = require('path')
+const path = require("path");
 
-const config = require('./config')
+const config = require("./config");
 
 exports.assetsPath = function(_path) {
-    return path.posix.join(config.assetsSubDirectory, _path)
-}
+  return path.posix.join(config.assetsSubDirectory, _path);
+};
 
 exports.resolve = function(dir) {
-    return path.join(__dirname, './../', dir)
-}
+  return path.join(__dirname, "./../", dir);
+};

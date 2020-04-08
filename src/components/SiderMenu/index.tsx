@@ -1,25 +1,27 @@
-import React from 'react';
-import { Layout, Menu } from 'antd';
+import React from "react";
+import { Layout, Menu } from "antd";
 
 const { Sider } = Layout;
 
 interface IProps {
-  menuRender: any,
-};
+  menuRender: any;
+}
 
 const SiderMenu: React.FunctionComponent<IProps> = (props: IProps) => {
   const { menuRender } = props;
 
-  return <Sider
-    style={{
-      overflow: 'auto',
-      height: '100vh',
-      // position: 'fixed',
-      // left: 0,
-    }}
-  >
+  return (
+    <Sider
+      style={{
+        overflow: "auto",
+        height: "100vh"
+        // position: 'fixed',
+        // left: 0,
+      }}
+    >
       {menuRender()}
-  </Sider>
-}
+    </Sider>
+  );
+};
 
 export default SiderMenu;

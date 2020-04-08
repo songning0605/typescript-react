@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import { Layout, Menu } from 'antd';
-import { Link } from 'react-router-dom';
-import { nestedRouteRender } from '@/App/routeRender';
-import SiderMenu from '@components/SiderMenu';
-import styles from '@/layouts/styles/basicLayout.scss';
+import React, { useState } from "react";
+import { Layout, Menu } from "antd";
+import { Link } from "react-router-dom";
+import { nestedRouteRender } from "@/App/routeRender";
+import SiderMenu from "@components/SiderMenu";
+import styles from "@/layouts/styles/basicLayout.scss";
 
 const { Header, Content } = Layout;
 
 interface IProps {
-  routes: Array<any>
+  routes: Array<any>;
 }
 
 const BasicLayout: React.FunctionComponent<IProps> = (props: IProps) => {
-  const [selectedKeys, setKeys] = useState([]);
-  console.log('---render---', selectedKeys);
+  const [members, setMembers] = useState<[string]>([""]);
+  const [count, setCount] = React.useState(0);
+  console.log("---render---", members);
   const { routes } = props;
 
   // 渲染当前窗口（应用）路由
@@ -21,27 +22,33 @@ const BasicLayout: React.FunctionComponent<IProps> = (props: IProps) => {
 
   const menuClick = ({ item, key, keyPath, domEvent }) => {
     console.log(key);
-    
-    setKeys([key]);
-  }
+    setCount(count + 1);
+    setMembers([key]);
+  };
 
   // 渲染当前窗口（应用）菜单
-  const menuRender = () => <Menu onClick={menuClick} selectedKeys={selectedKeys} theme="dark" mode="inline">
-    {routes.map(
-      (item, key) =>
+  const menuRender = () => (
+    <Menu onClick={menuClick} selectedKeys={members} theme="dark" mode="inline">
+      {routes.map((item, key) => (
         <Menu.Item key={item.key}>
           <Link to={item.path}>{item.name}</Link>
         </Menu.Item>
-    )}
-  </Menu>
+      ))}
+    </Menu>
+  );
 
-  return <Layout>
-    <SiderMenu menuRender={menuRender} />
+  return (
     <Layout>
-      <Header>Header</Header>
-      <Content>{routeRender()}</Content>
+      <SiderMenu menuRender={menuRender} />
+      <Layout>
+        <Header>Header</Header>
+        <Content>
+          {routeRender()}
+          <div onClick={() => setCount(count + 1)}>{count}</div>
+        </Content>
+      </Layout>
     </Layout>
-  </Layout>
+  );
 };
 
 export default BasicLayout;

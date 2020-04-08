@@ -1,5 +1,3 @@
-export interface StoreModel {
-}
+export interface StoreModel {}
 
-export const storeModel: StoreModel = {
-};
+export const storeModel: StoreModel = {};

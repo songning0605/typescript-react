@@ -1,21 +1,26 @@
-import React from 'react';
-import styles from '@/layouts/styles/index.scss';
-import {NavLink} from "react-router-dom";
-import {Card} from "antd";
+import React from "react";
+import styles from "@/layouts/styles/index.scss";
+import { NavLink } from "react-router-dom";
+import { Card } from "antd";
 
-interface IProps {
+interface IProps {}
 
-}
+const cardRender = (name: any) => (
+  <Card
+    hoverable
+    style={{ width: 240 }}
+    cover={
+      <img
+        style={{ background: "#ddd" }}
+        src="https://gw.alipayobjects.com/zos/rmsportal/tXlLQhLvkEelMstLyHiN.svg"
+      />
+    }
+  >
+    <Card.Meta title={name} description="这里可以替换为一个微应用" />
+  </Card>
+);
 
-const cardRender = (name:any) => <Card
-  hoverable
-  style={{ width: 240 }}
-  cover={<img style={{background: '#ddd'}} src="https://gw.alipayobjects.com/zos/rmsportal/tXlLQhLvkEelMstLyHiN.svg" />}
->
-  <Card.Meta title={name} description="这里可以替换为一个微应用" />
-</Card>
-
-const Index: React.FunctionComponent<IProps> = (props:IProps) =>{
+const Index: React.FunctionComponent<IProps> = (props: IProps) => {
   return (
     <div>
       <header className={styles.headerWrapper}>
@@ -23,12 +28,10 @@ const Index: React.FunctionComponent<IProps> = (props:IProps) =>{
       </header>
       <section className={styles.mainWrapper}>
         <div className="card">
-          <NavLink to="/index">
-            {cardRender('首页')}
-          </NavLink>
+          <NavLink to="/index">{cardRender("首页")}</NavLink>
         </div>
         <div className="card">
-          <NavLink to="/other">{cardRender('Other')}</NavLink>
+          <NavLink to="/other">{cardRender("Other")}</NavLink>
         </div>
       </section>
     </div>

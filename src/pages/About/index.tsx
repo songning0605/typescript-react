@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const About: React.FunctionComponent = props => {
-  return <div>我叫宋宁</div>
-}
+  return <div>我叫宋宁</div>;
+};
 
-export default About
+export default About;
